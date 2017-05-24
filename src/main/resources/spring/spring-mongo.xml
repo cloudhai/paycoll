@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/data/mongo
+       http://www.springframework.org/schema/data/mongo/spring-mongo.xsd">
+
+    <!--<context:property-placeholder location="classpath:/config/mongodb.properties"/>-->
+    <mongo:mongo-client id="mongo" replica-set="${mongo.repset}" credentials="${mongo.user}:${mongo.passwd}@${mongo.dbname}">
+        <mongo:client-options connections-per-host="4"
+                       threads-allowed-to-block-for-connection-multiplier="4"
+                       connect-timeout="15000"
+                       max-wait-time="15000" read-preference="SECONDARY_PREFERRED"
+                       socket-keep-alive="true" write-concern="SAFE"
+                       socket-timeout="0"/>
+    </mongo:mongo-client>
+    <bean id="converterMapper" class="org.springframework.data.mongodb.core.convert.DefaultMongoTypeMapper">
+        <constructor-arg name="typeKey"><null/></constructor-arg>
+    </bean>
+    <mongo:db-factory id="mongoDbFactory" dbname="test" mongo-ref="mongo"/>
+    <mongo:mapping-converter id="converter" base-package="com.hai.web.model.mongo" type-mapper-ref="converterMapper">
+        <!--<mongo:custom-converters>
+            <mongo:converter>
+                <bean class="com.hai.web.listener.mongo.DateConverter"/>
+            </mongo:converter>
+        </mongo:custom-converters>-->
+    </mongo:mapping-converter>
+
+    <mongo:repositories base-package="com.hai.web.mapper.mongo"/>
+    <mongo:template id="mongoTemplate" db-factory-ref="mongoDbFactory" converter-ref="converter" write-concern="MAJORITY"/>
+    <bean class="com.hai.web.listener.mongo.SaveMongoEventListener"/>
+</beans>

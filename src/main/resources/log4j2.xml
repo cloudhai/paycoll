@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="off" monitorInterval="1800">
+    <properties>
+        <!--<property name="LOG_HOME"></property>-->
+        <property name="PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} %level [%t]-[%l] - %msg%n</property>
+    </properties>
+
+    <appenders>
+        <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${PATTERN}" />
+        </Console>
+
+        <RollingFile name="RollingFile" fileName="logs/app.log"
+                     filePattern="log/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout pattern="${PATTERN}"/>
+            <SizeBasedTriggeringPolicy size="1MB"/>
+        </RollingFile>
+
+    </appenders>
+    <loggers>
+        <root level="debug">
+            <appender-ref ref="Console"/>
+        </root>
+        <logger name="com.hai.web.wx" level="debug" additivity="false">
+            <appender-ref ref="Console"/>
+        </logger>
+    </loggers>
+</configuration>
