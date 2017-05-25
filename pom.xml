@@ -203,7 +203,7 @@
   <build>
     <finalName>paycoll</finalName>
     <filters>
-      <filter>src/main/resources/filter/config-${evn}.properties</filter>
+      <filter>${basedir}/src/main/resources/filter/config-${evn}.properties</filter>
     </filters>
     <resources>
       <resource>
