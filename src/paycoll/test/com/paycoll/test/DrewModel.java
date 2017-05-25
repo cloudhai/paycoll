@@ -22,4 +22,8 @@ public class DrewModel {
     public void setValue(int value) {
         this.value = value;
     }
+
+    public boolean isFull(){
+        return this.value == this.total;
+    }
 }
