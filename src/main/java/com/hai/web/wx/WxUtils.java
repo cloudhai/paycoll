@@ -3,9 +3,9 @@ package com.hai.web.wx;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.hai.web.util.CryptionUtils;
-import com.hai.web.util.HttpUtils;
-import com.hai.web.util.LogUtils;
+import com.hai.util.CryptionUtils;
+import com.hai.util.HttpUtils;
+import com.hai.util.LogUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.*;

@@ -1,11 +1,7 @@
-package com.hai.web.util;
+package com.hai.util;
 
-import org.springframework.beans.factory.InitializingBean;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ApplicationObjectSupport;
 import org.springframework.web.context.ContextLoader;
 import org.springframework.web.context.WebApplicationContext;
-import org.springframework.web.servlet.support.RequestContextUtils;
 
 /**
  * Created by cloud on 2017/3/22.

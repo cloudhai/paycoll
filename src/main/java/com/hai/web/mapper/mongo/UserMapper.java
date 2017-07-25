@@ -1,7 +1,7 @@
 package com.hai.web.mapper.mongo;
 
 import com.hai.web.model.mongo.UserModel;
-import com.hai.web.util.LogUtils;
+import com.hai.util.LogUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;

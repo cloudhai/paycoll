@@ -1,5 +1,6 @@
 package com.hai.web.model.mongo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.hai.web.annotation.GeneratedValue;
 import com.hai.web.model.BaseModel;
 import com.hai.web.wx.msg.BaseMsg;
@@ -26,8 +27,10 @@ public class UserModel extends BaseModel {
     @Field("userType")
     private String userType;
     @Field("registTm")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss SSS",timezone="GMT+8")
     private Date registTm;
     @Field("lastLogintm")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss SSS",timezone="GMT+8")
     private Date lastLoginTm;
 
     public long getUserId() {

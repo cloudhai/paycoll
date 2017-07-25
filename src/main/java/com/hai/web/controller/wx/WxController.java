@@ -1,9 +1,9 @@
 package com.hai.web.controller.wx;
 
 import com.hai.web.base.WebResult;
-import com.hai.web.util.LogUtils;
-import com.hai.web.util.RandomUtils;
-import com.hai.web.util.XmlUtils;
+import com.hai.util.LogUtils;
+import com.hai.util.RandomUtils;
+import com.hai.util.XmlUtils;
 import com.hai.web.wx.JsApiTicket;
 import com.hai.web.wx.MsgParser;
 import com.hai.web.wx.WxUserInfo;
@@ -13,7 +13,6 @@ import com.hai.web.wx.msg.TextMsg;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import java.util.SortedMap;
 import java.util.TreeMap;

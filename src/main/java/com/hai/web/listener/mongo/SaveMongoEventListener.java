@@ -2,8 +2,7 @@ package com.hai.web.listener.mongo;
 
 import com.hai.web.annotation.GeneratedValue;
 import com.hai.web.model.mongo.SequenceId;
-import com.hai.web.util.LogUtils;
-import org.springframework.cglib.core.ReflectUtils;
+import com.hai.util.LogUtils;
 import org.springframework.data.mongodb.core.FindAndModifyOptions;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.mapping.event.*;

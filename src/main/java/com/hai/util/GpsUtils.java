@@ -1,4 +1,4 @@
-package com.hai.web.util;
+package com.hai.util;
 
 /**
  * Created by cloud on 2017/5/4.

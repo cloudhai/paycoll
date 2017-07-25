@@ -1,17 +1,14 @@
-package com.hai.web.util;
+package com.hai.util;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.hai.web.wx.msg.TextMsg;
-import com.sun.xml.internal.bind.marshaller.CharacterEscapeHandler;
 import org.dom4j.*;
 import org.dom4j.Element;
 
 import javax.xml.bind.*;
-import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
-import java.io.Writer;
 import java.util.List;
 
 /**
@@ -87,14 +84,6 @@ public class XmlUtils {
             marshaller.setProperty(marshaller.JAXB_FORMATTED_OUTPUT,true);
             marshaller.setProperty(marshaller.JAXB_ENCODING,encoding);
             marshaller.setProperty(marshaller.JAXB_FRAGMENT,true);
-//            marshaller.setProperty("com.sun.xml.internal.bind.marshaller.CharacterEscapeHandler",
-//                    new CharacterEscapeHandler() {
-//                        @Override
-//                        public void escape(char[] ch, int start,int length, boolean isAttVal,
-//                                           Writer writer) throws IOException {
-//                            writer.write(ch, start, length);
-//                        }
-//                    });
             StringWriter writer = new StringWriter();
             marshaller.marshal(obj,writer);
             result = writer.toString();
@@ -102,6 +91,10 @@ public class XmlUtils {
             e.printStackTrace();
         }
         return result;
+    }
+
+    private static String beanToXml(Object obj){
+        return beanToXml(obj,"UTF-8");
     }
 
 

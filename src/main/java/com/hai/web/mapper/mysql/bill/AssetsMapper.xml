@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hai.web.mapper.mysql.bill.AssetsMapper">
+    <select id="findAssetsByUid" resultType="com.hai.web.model.AssetsEntity">
+        SELECT
+          user_id as uid,
+          amt as `value`,
+          `state` as `state`
+        FROM
+          bi_user_priv_info
+        WHERE
+          user_id = #{uid}
+    </select>
+</mapper>

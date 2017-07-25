@@ -1,4 +1,4 @@
-package com.hai.web.util;
+package com.hai.util;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

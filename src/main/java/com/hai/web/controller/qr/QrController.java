@@ -1,8 +1,8 @@
 package com.hai.web.controller.qr;
 
 import com.hai.web.base.WebResult;
-import com.hai.web.util.LogUtils;
-import com.hai.web.util.SpringUtils;
+import com.hai.util.LogUtils;
+import com.hai.util.SpringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

@@ -1,6 +1,6 @@
 package com.hai.web.wx;
 
-import com.hai.web.util.XmlUtils;
+import com.hai.util.XmlUtils;
 import com.hai.web.wx.msg.*;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;

@@ -1,4 +1,4 @@
-package com.hai.web.util;
+package com.hai.util;
 
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.lang3.StringUtils;

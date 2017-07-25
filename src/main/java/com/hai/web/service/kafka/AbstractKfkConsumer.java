@@ -1,7 +1,7 @@
 package com.hai.web.service.kafka;
 
 
-import com.hai.web.util.LogUtils;
+import com.hai.util.LogUtils;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;

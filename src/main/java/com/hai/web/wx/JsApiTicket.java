@@ -3,8 +3,8 @@ package com.hai.web.wx;
 import com.alibaba.druid.util.StringUtils;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.hai.web.util.HttpUtils;
-import com.hai.web.util.LogUtils;
+import com.hai.util.HttpUtils;
+import com.hai.util.LogUtils;
 
 /**
  * Created by cloud on 2017/3/1.

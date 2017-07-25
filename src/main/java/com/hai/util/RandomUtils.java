@@ -1,4 +1,4 @@
-package com.hai.web.util;
+package com.hai.util;
 
 import java.util.Random;
 
